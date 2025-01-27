@@ -1,0 +1,9 @@
+h1{
+	text-shadow: 3px 3px 10px indigo;
+}
+p{
+	color: azure;
+	background: chartreuse;
+	font-weight: bold;
+	text-align: center;
+}

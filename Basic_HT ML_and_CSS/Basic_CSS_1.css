@@ -1,0 +1,15 @@
+div {
+			font-family: "Lucida Handwriting", sans-serif;
+		}
+		h1 {
+			color: lightgreen;
+			text-align: center;
+		}
+		h2 {
+			color: darkseagreen;
+			text-align: center;
+		}
+		p {
+			color: salmon;
+			text-align: right;
+		}
