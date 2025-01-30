@@ -4,10 +4,16 @@
         <title>Contact Us</title>
         <meta charset="UTF-8">
         <meta name="description" content="Pet Adoption Contact Form Page">
+        <link rel="stylesheet" href="css/style.css">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
     </head>
     <body>
         <!--NAVBAR-->
-        <nav>
+        <nav class="nav-bar">
             <ul>
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
@@ -16,23 +22,23 @@
         <!--Header-->
         <header>
             <div>
-                <h1>Contact Us!</h1>
+                <h1 class="animate-text">Contact Us!</h1>
             </div>
         </header>
         <!--FORM-->
         <section>
             <div>
-                <h3>Please Provide your conrtact information
+                <h3 id="contact-h3">Please Provide your conrtact information
                     and a breif message of your inquery.
                 </h3>
                 <div>
                     <form>
                         <input type="text" placeholder="First Name">
                         <input type="text" placeholder="Last Name"><br>
-                        <input type="email" placeholder="Email"><br>
+                        <input type="email" placeholder="Email">
                         <input type="tel" placeholder="Phone Number"><br>
                         <input type="checkbox" id="newsletter">
-                        <lable for="newsletter">Would you like to recieve our monthly newsletter?</lable><br>
+                        <label for="newsletter">Would you like to recieve our monthly newsletter?</label><br>
                         <textarea placeholder="Type message here..."></textarea><br>
                         <input type="submit" value="Submit">
                     </form>

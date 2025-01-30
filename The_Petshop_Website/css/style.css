@@ -1,0 +1,288 @@
+/*Import link for Roboto font from fonts.google.com*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta&family=Roboto&display=swap');
+body{
+    background-color: white;
+    overflow-x: hidden; /*Hides bottom left right scroll bar*/
+}
+
+/*NAVBAR*/
+li{
+    display: inline;
+    padding: 5px;
+
+}
+
+a{
+    font-family: "Roboto", sans-serif; /*Font from fonts.google.com*/
+    font-size: 20px;
+    font-weight: 700;
+    text-shadow: 1px .5px 4px rgba(46, 31, 31, 0.5);
+    color: white;
+    text-decoration: none; /*Removes underlines*/
+}
+
+a:hover{
+    color: #d7eaf7; /*changes color of element during hover*/
+}
+
+.nav-bar{
+    background-color: #216391;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /*The following minus margins stretch the navabar 
+    background beyond the window's edge*/
+    margin-top: -8px;
+    margin-left: -10px;
+    margin-right: -10px;
+    position: sticky; /*Creates element that stays in same spot in browser screen*/
+    top: 0; /*Tells browser to stick navbar at top of screen*/
+    z-index: 9; /*sets stack layer to scoll over all elements*/
+}
+
+/*Creartes line under home and contact links to seperate from img links*/
+#nav-border{
+    padding-bottom: 10px;
+    border-bottom: 3px solid #ffffff;
+}
+
+/*HEADERS*/
+h1, h2, h3{
+    color: #0a3f63;
+    text-align: center;
+    font-family: "Mukta", sans-serif; /*Font from fonts.google.com*/
+    text-shadow: 1px .5px 4px rgba(0, 0, 0, 0.5);
+    margin: 0px;
+}
+
+h1{
+    font-size: 60px;
+    margin-top: 50px;
+}
+
+h2{
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+h3{
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+#contact-h3{
+    text-shadow: none;
+}
+
+/*Creates text color change animation on h1 tags*/
+@keyframes color-text{
+    0%{color: #bfe1ff;}
+    100%{color: #0a3f63;}
+}
+
+/*Calls animation by name in CSS selector to be applied to specific HTML element*/
+.animate-text{
+    animation: color-text 4s;
+}
+
+/*BODY CONTENT*/
+
+img{
+    width: 500px;
+    height: 350px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 
+    0 6px 20px 0 rgba(0, 0, 0, 19);
+}
+
+.column{
+    float: left;
+    width: 48%; /*places imgs side by side when float is used*/
+    padding: 10px;
+}
+
+/*Groups elemenets inside div to force outside elements under it*/
+.container{
+    background-size: 100% !important;
+    margin: 0px -60px 50px -40px;
+    padding-top: 5px; /*adds inline space so elements don't sit on edge of div*/
+    padding-bottom: 10px;
+}
+
+/*This is part of container class selector to format elements in table*/
+.container::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/*Sets up size of div that holds img so img can be centered*/
+.image-container{
+    position: relative;
+    width: 500px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+/*Sets background color in each div with an inage and specifies which one by use of id names*/
+#cat{
+    background-color: #d7eaf7;
+}
+
+#dog{
+    background-color: #c3e0c5;
+}
+
+#rabbit{
+    background-color: #c3e0c5;
+}
+
+#guinea{
+    background-color: #d7eaf7;
+}
+
+#fish{
+    background-color: #d7eaf7;
+}
+
+#reptile{
+    background-color: #c3e0c5;
+}
+
+/*sets up properties for overlay on each img*/
+.overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 500px;
+    height: 350px;
+    margin-top: 50px;
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0);
+    opacity: 0;
+}
+
+/*the hover pseudo class triggers overlay to 60% opacity when user hovers mouse over img*/
+.overlay:hover{
+    opacity: 0.6;
+}
+
+/*This selector targets video on page*/
+iframe{
+    display: table;
+    margin: auto;
+    border-radius: 10px;
+    border: none;
+}
+
+/*styles div that holds video*/
+#video{
+    background-color: #c3e0c5;
+    padding-top: 5px; /*padding adds inline space so elements don't sit on edge of div*/
+    padding-bottom: 50px;
+}
+
+footer{
+    background-color: #216391;
+    margin-top: 50px;
+    /*neg margines stretch footer bg beyond screen edge on left and right*/
+    margin-right: -10px;
+    margin-left: -10px;
+    bottom: 0; /*positions to bottom of screen*/
+}
+
+/*styles table elements within footer tag*/
+table{
+    width: 100%;
+}
+
+td{
+    text-align: center;
+    width: 33%; /*divides three colums equaly to take up one third of browser width*/
+}
+
+/*specificily styles p elements within td elements*/
+td p{
+    font-family: 'Roboto', sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+/*FORM CSS*/
+form{
+    padding: 15px;
+    display: table;
+    margin: auto;
+}
+
+input{
+    border: 2px solid rgb(165, 165, 165);
+    border-radius: 2px;
+    padding: 1px;
+    margin: 10px 15px 10px 0px;
+    font-size: 20px;
+    color: rgb(165, 165, 165);
+    transition: color 0.3s ease-out;
+}
+
+/*focus is triggered when user clicks input element*/
+input:focus{
+    box-sizing: border-box;
+    border: 2px solid #0a3f63;
+    color: #000000;
+    transition: 0.3s ease-in;
+    outline: none;
+}
+
+/*styles label tag on contact form*/
+label{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    margin: 10px;
+}
+
+/*type selector for textares element for a user to write a message*/
+textarea{
+    width: 100%;
+    height: 200px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 3px solid rgb(165, 165, 165);
+    border-radius: 4px;
+    background: #ffffff;
+    font-family: 'Rooto', sans-serif;
+    color: rgb(165, 165, 165);
+    font-size: 15px;
+    resize: both;
+    transition: color 0.3s ease-out;
+}
+
+/*applies different styling when user triggers focus on text area*/
+textarea:focus{
+    box-sizing: border-box;
+    color: black;
+    border: 3px solid #0a3f63;
+    transition: 0.3s ease-in;
+    outline: none;
+}
+
+/*Styles the submit button*/
+input[type="submit"]{
+    background-color: #0a3f63;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: white;
+    padding: 16px 32px;
+    margin: 4px 2px;
+    cursor: pointer;
+    float: right;
+}
+
+/*changes bg color of submit on hover*/
+input[type="submit"]:hover{
+    background-color: #052133;
+}
