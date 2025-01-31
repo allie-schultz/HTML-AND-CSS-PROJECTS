@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Col Assignment</title>
+
+    <style>
+        table, th, td{
+            border: none;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        table{
+            width: 100%;
+        }
+
+        td, th {
+            padding: 3px;
+        }
+
+        col {
+            background-color: rgb(164, 212, 255);
+        }
+
+        #genre {
+            background-color: rgb(136, 241, 136);
+        }
+
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            color: rgb(26, 43, 121);
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <h1>Column Assignment</h1>
+        <colgroup>
+            <col span="2">
+            <col id="genre">
+        </colgroup>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Genre</th>
+        </tr>
+        <tr>
+            <td>The Adventures of Sherlock Holmes</td>
+            <td>Sir Arthur Conan Doyle</td>
+            <td>Mystery</td>
+        </tr>
+        <tr>
+            <td>A Long Way Down</td>
+            <td>Nick Hornby</td>
+            <td>Contemporary</td>
+        </tr>
+    </table>
+</body>
+</html>
