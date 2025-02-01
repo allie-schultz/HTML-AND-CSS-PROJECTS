@@ -1,0 +1,262 @@
+/*NAVBAR*/
+.nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 4;
+    /*set position of navbar in stack so it is on top*/
+}
+
+ul {
+    list-style-type: none;
+    /*removes default bullet points*/
+    background-color: #363636;
+    margin: -10px -10px 0px -10px;
+    /*margin value order: top, right, bottom, left*/
+    overflow: hidden;
+    /*hides margin space and prevents horizontal scrollbar*/
+    display: flex;
+    /*creates flex container for elements to take uo width*/
+    align-items: center;
+}
+
+a {
+    display: block;
+    font-family: "Playwrite IN", serif;
+    ;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    /*removes default underline*/
+    text-transform: uppercase;
+    /*transforms text to uppercase*/
+    width: 100px;
+    padding: 30px;
+    text-align: center;
+    transition: background-color 0.3s ease-out;
+}
+
+/*NAVBAR ROLLOVER EFFECTS*/
+a:hover,
+.drop:hover
+
+/*drop hover triggers when any 
+one of the links in imahes list tag is being hovered over*/
+    {
+    background-color: rgb(228, 159, 0);
+    color: rgb(49, 49, 49);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.7);
+    transition: background-color 0.3s ease-in;
+}
+
+/*styles and hides a link within div tag*/
+.rollover-menu {
+    display: none;
+    position: absolute;
+    /*removes from normal document flow*/
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0, 0.2);
+}
+
+/*displays a elements when user hovers over images link*/
+.drop:hover .rollover-menu {
+    display: block;
+}
+
+/*Styles anchor elements within div tag containing rollover-menu selector*/
+.rollover-menu a {
+    color: #363636;
+}
+
+/*styles anchor elements within div tag that contains
+rollover-menu class*/
+.rollover-menu a:hover {
+    color: white;
+}
+
+/*styles first anchor child*/
+.rollover-menu a:hover:nth-child(1) {
+    background-color: rgb(117, 20, 20);
+}
+
+/*styles second anchor child*/
+.rollover-menu a:hover:nth-child(2) {
+    background-color: rgb(87, 7, 7);
+}
+
+/*styles third anchor child*/
+.rollover-menu a:hover:nth-child(3) {
+    background-color: rgb(48, 2, 2);
+}
+
+/*FOOTER*/
+footer {
+    background-color: #363636;
+    margin: 30px -10px -10px -10px;
+    /*top, right, bottom, left*/
+    overflow: hidden;
+    /*hides margin space and prevents horizintal scroll*/
+    height: 70px;
+}
+
+/*styles footer text*/
+.footer-text {
+    font-family: "Playwrite IN", serif;
+    ;
+    font-size: 23px;
+    font-weight: 400;
+    color: rgb(288, 159, 0);
+    text-align: center;
+}
+
+/*IMAGES*/
+img {
+    width: 700px;
+    height: 550px;
+}
+
+/*creates container for each image*/
+.image-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 120px;
+}
+
+/*creates uniform amount of space from navbar to top of image*/
+#image3 {
+    padding-bottom: 170px;
+}
+
+/*IMAGE ONE*/
+
+/*overlays dark grey color over first image*/
+.overlay {
+    position: absolute;
+    width: 700px;
+    height: 550px;
+    background-color: rgb(90, 90, 90);
+    opacity: 0;
+    transition: 0.5s ease;
+}
+
+/*triggers hover effect of overlay on img 1 with 60% opacity*/
+.overlay:hover {
+    opacity: 0.6;
+}
+
+/*IMAGE TWO*/
+
+.zoom {
+    transform: scale(1);
+    /*sets base size of img 2 for zoom in effect*/
+    transition: 0.5s ease-out;
+    /*creates smooth transition of img
+    zooming back to reg size*/
+    z-index: 3;
+    /*behind nav to not cover navbar*/
+}
+
+/*creates zoom effect for img 2*/
+.zoom:hover {
+    /*img 2 shrinks*/
+    transform: rotate(1260deg) scale(0.2);
+    transition: 0.5s ease-out;
+}
+
+/*IMAGE THREE*/
+
+/*creates animation positions first and hides overflow beyond edges of image 3*/
+.circle {
+    position: relative;
+    margin: 0px;
+    overflow: hidden;
+}
+
+/*sets up burst animation bfore hover effect is triggered*/
+.circle::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    /*creates circle/oval shape*/
+    opacity: 0;
+    /*makes invisible until triggered by hover*/
+    top: 50%;
+    left: 50%;
+    /*position circle to center of img 3*/
+    transform: translate(-50%, -50%);
+    /*allows circle to
+    evenly expand on all sides of img 3*/
+    animation: burst-reverse 1s;
+}
+
+/*triggers hover effect on circle class selector ::before*/
+.circle:hover::before {
+    animation: burst 1s;
+    animation-fill-mode: forwards;
+}
+
+/*creates growing circle effect*/
+@keyframes burst {
+    0%
+
+    /*0% is start of animation*/
+        {
+        opacity: 0.2;
+        background-color: rgb(255, 0, 0);
+    }
+
+    50% {
+        opacity: 0.5;
+        background-color: rgb(255, 106, 0);
+
+    }
+
+    100%
+
+    /*100% is end of animation*/
+        {
+        opacity: 0.7;
+        background-color: rgb(255, 213, 2);
+        width: 300%;
+        height: 300%;
+    }
+}
+
+/*animation of circle shrinking*/
+@keyframes burst-reverse {
+    0%
+
+    /*0% is start of animation*/
+        {
+        opacity: 0.7;
+        background-color: rgb(255, 213, 2);
+        width: 250%;
+        height: 250%;
+    }
+
+    25%{
+        opacity: 0.6;
+        background-color: rgb(255, 213, 2);
+       
+    }
+
+    50%
+
+    /*100% is end of animation*/
+        {
+        opacity: 0.5;
+        background-color: rgb(255, 106, 0);
+
+    }
+
+    100%
+
+    /*0% is start of animation*/
+        {
+        opacity: 0.2;
+        background-color: rgb(255, 0, 0);
+    }
+
+}
