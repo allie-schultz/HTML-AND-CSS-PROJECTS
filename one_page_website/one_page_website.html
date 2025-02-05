@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/one_page_website.css">
     </head>
     <body>
         <!--HEADER-->
@@ -13,10 +14,10 @@
         <!--NAV-->
         <nav>
             <ul>
-                <a href="#about"><li>About</li></a>
-                <a href="#pics"><li>Pictures</li></a>
-                <a href="#video"><li>Mori Video</li></a>
-                <a href="#contact"><li>Contact Mori</li></a>
+                <a href="#about" aria-label="Go to about section"><li>About</li></a>
+                <a href="#pics" aria-label="Go to pictures section"><li>Pictures</li></a>
+                <a href="#video" aria-label="Go to video section"><li>Mori Video</li></a>
+                <a href="#contact" aria-label="Go to contact form"><li>Contact Mori</li></a>
             </ul>
         </nav>
         <!--ABOUT-->
@@ -50,12 +51,12 @@
         <section>
             <h2 id="contact">Contact Mori</h2>
             <form>
-                <input type="text" placeholder="First Name"><br>
-                <input type="text" placeholder="Last Name"><br>
-                <input type="text" placeholder="Email"><br>
-                <textarea placeholder="Message here..."></textarea><br>
-                <input type="submit" value="Submit">
-                <input type="reset" value="Clear Form">
+                <input id="fname" type="text" placeholder="First Name" aria-label="Enter first name"><br>
+                <input id="lname" type="text" placeholder="Last Name" aria-label="Enter last name"><br>
+                <input id="email" type="text" placeholder="Email" aria-label="Enter email address"><br>
+                <textarea id="textarea" placeholder="Message here..." aria-label="Enter message"></textarea><br>
+                <input class="button" type="submit" value="Submit" aria-label="Submit button">
+                <input class="button" type="reset" value="Clear Form" aria-label="Clear form button">
             </form>
         </section>
         <footer style="text-align: center;"><p>Copyright &copy; Allie Schultz 2025</p></footer>

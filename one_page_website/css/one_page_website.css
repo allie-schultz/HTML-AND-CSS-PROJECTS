@@ -1,0 +1,16 @@
+html{
+font-family: 'Courier New', Courier, monospace; 
+font-size: 1em;
+}
+
+form input, form textarea{
+    width: 50%;
+    margin: 5px;
+    padding: 5px;
+    border: 2px dashed rgb(87, 120, 225);
+    border-radius: 10px;
+}
+
+.button{
+    width: 25%;
+}
