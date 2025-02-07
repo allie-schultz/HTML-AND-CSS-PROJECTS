@@ -1,0 +1,30 @@
+body{
+    overflow-x: hidden;
+}
+
+footer  {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0px -15px 0px -15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.footer-text{
+    font-size: 1.5em;
+}
+
+.footer-img {
+    width: auto;
+    height: 80px;
+}
+
+li{
+    margin: 10px;
+}
+svg{
+    width: auto;
+    height: 45px;
+    color: black;
+}
