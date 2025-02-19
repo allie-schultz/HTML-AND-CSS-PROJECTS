@@ -7,8 +7,8 @@ This repository contains my HTML and CSS projects for The Tech Academy
 - [Academy Cinemas](#academy-cinemas)
 - [Grace Hopper](#grace-hopper-site)
 - [Petshop](#petshop)
-- [Mori's Site](#mori's-site)
-- [Luka's Album](#luka's-album)
+- [Mori's Site](#moris-site)
+- [Luka's Album](#lukas-album)
 
 ### Simple Recipes
 This is a responsive one-page site demostrating CSS scroll-behavior and the hover psedo-class with transition and transform properties. 
