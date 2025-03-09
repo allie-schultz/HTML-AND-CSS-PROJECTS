@@ -1,64 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="css/one_page_website.css">
-    </head>
-    <body>
-        <!--HEADER-->
-        <header>
-            <div>
-                <h1>Sir Moriarty</h1>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/one_page_website.css">
+    <script src="JS/one_page_website.js"></script>
+</head>
+
+<body>
+    <!--HEADER-->
+    <header>
+        <div>
+            <h1>Sir Moriarty</h1>
+        </div>
+    </header>
+    <!--NAV-->
+    <nav>
+        <ul>
+            <a href="#about" aria-label="Go to about section">
+                <li>About</li>
+            </a>
+            <a href="#pics" aria-label="Go to pictures section">
+                <li>Pictures</li>
+            </a>
+            <a href="#video" aria-label="Go to video section">
+                <li>Mori Video</li>
+            </a>
+            <a href="#contact" aria-label="Go to contact form">
+                <li>Contact Mori</li>
+            </a>
+        </ul>
+    </nav>
+    <!--ABOUT-->
+    <section>
+        <div>
+            <h2 id="about">About</h2>
+            <p>Sir Michael (Mori) Moriarty Mortimer Schultz is a 1 year old tuxedo cat.
+                He was adopted from a Los Angeles animal shelter at two months old.
+                Although his first couple of months in life were rough,
+                he has quickly adjusted to life as a spoiled feline.</p>
+        </div>
+    </section>
+    <!--PICTURES-->
+    <section>
+        <h2 id="pics">Mori Pictures</h2>
+
+        <!-- OPEN LIGHTBOX IMAGES -->
+        <div class="row">
+            <div class="column">
+                <img src="images/mori_box_small.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
             </div>
-        </header>
-        <!--NAV-->
-        <nav>
-            <ul>
-                <a href="#about" aria-label="Go to about section"><li>About</li></a>
-                <a href="#pics" aria-label="Go to pictures section"><li>Pictures</li></a>
-                <a href="#video" aria-label="Go to video section"><li>Mori Video</li></a>
-                <a href="#contact" aria-label="Go to contact form"><li>Contact Mori</li></a>
-            </ul>
-        </nav>
-        <!--ABOUT-->
-        <section>
-            <div>
-                <h2 id="about">About</h2>
-                <p>Sir Michael (Mori) Moriarty Mortimer Schultz is a 1 year old tuxedo cat. 
-                    He was adopted from a Los Angeles animal shelter at two months old.
-                    Although his first couple of months in life were rough,
-                    he has quickly adjusted to life as a spoiled feline.</p>
+            <div class="column">
+                <img src="images/mori_carrier_small.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
             </div>
-        </section>
-        <!--PICTURES-->
-        <section>
-            <h2 id="pics">Mori Pictures</h2>
-            <div>
-                <img src="images/mori_box.jpg" alt="Mori in a box">
-                <img src="images/mori_carrier.jpg" alt="Mori in his carrier">
-                <img src="images/mori_math.jpg" alt="Mori studying trigonometry">
-                <img src="images/mori_mat.jpg" alt="Mori on his heating pad">
-                <img src="images/mori_rug.jpg" alt="Mori hangin on a rug">
-                <img src="images/mori_toy.jpg" alt="Mori with his toy">
-                <img src="images/mori_tv.jpg" alt="Mori watching tv">
+            <div class="column">
+                <img src="images/mori_mat_small.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
             </div>
-        </section>
-        <section>
-            <h2 id="video">Mori Video</h2>
-            <iframe src="images/mori_play.mp4" frameborder="0" width="auto" height="400"></iframe>
-            <p>Kitten Mori playing with a new mouse toy!</p>
-        </section>
-        <section>
-            <h2 id="contact">Contact Mori</h2>
-            <form>
-                <input id="fname" type="text" placeholder="First Name" aria-label="Enter first name"><br>
-                <input id="lname" type="text" placeholder="Last Name" aria-label="Enter last name"><br>
-                <input id="email" type="text" placeholder="Email" aria-label="Enter email address"><br>
-                <textarea id="textarea" placeholder="Message here..." aria-label="Enter message"></textarea><br>
-                <input class="button" type="submit" value="Submit" aria-label="Submit button">
-                <input class="button" type="reset" value="Clear Form" aria-label="Clear form button">
-            </form>
-        </section>
-        <footer style="text-align: center;"><p>Copyright &copy; Allie Schultz 2025</p></footer>
-    </body>
+            <div class="column">
+                <img src="images/mori_math_small.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+            </div>
+            <div class="column">
+                <img src="images/mori_rug_small.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow">
+            </div>
+            <div class="column">
+                <img src="images/mori_toy_small.jpg" onclick="openModal();currentSlide(6)" class="hover-shadow">
+            </div>
+            <div class="column">
+                <img src="images/mori_tv_small.jpg" onclick="openModal();currentSlide(7)" class="hover-shadow">
+            </div>
+        </div>
+
+        <!-- The Modal/Lightbox -->
+        <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+                <div class="slides-wrapper">
+                <div class="mySlides">
+                    <div class="numbertext">1 / 7</div>
+                    <img src="images/mori_box.jpg" style="width:50%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">2 / 7</div>
+                    <img src="images/mori_carrier.jpg" style="width:50%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">3 / 7</div>
+                    <img src="images/mori_mat.jpg" style="width:50%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">4 / 7</div>
+                    <img src="images/mori_math.jpg" style="width:50%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">5 / 7</div>
+                    <img src="images//mori_rug.jpg" style="width:50%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">6 / 7</div>
+                    <img src="images/mori_toy.jpg" style="width:50%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">7 / 7</div>
+                    <img src="images/mori_tv.jpg" style="width:50%">
+                </div>
+
+                <!-- Next/previous controls -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+                <!-- Caption text -->
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+
+                <!-- Thumbnail image controls -->
+                 <div class="thumb-container">
+                <div class="column">
+                    <img class="thumbnail" src="images/mori_box_small.jpg" onclick="currentSlide(1)" alt="Mori in a box">
+                </div>
+
+                <div class="column">
+                    <img class="thumbnail" src="images/mori_carrier_small.jpg" onclick="currentSlide(2)" alt="Mori in his carrier">
+                </div>
+
+                <div class="column">
+                    <img class="thumbnail" src="images/mori_mat_small.jpg" onclick="currentSlide(3)" alt="Mori laying on a mat">
+                </div>
+
+                <div class="column">
+                    <img class="thumbnail" src="images/mori_math_small.jpg" onclick="currentSlide(4)" alt="Mori with a math textbook">
+                </div>
+
+                <div class="column">
+                    <img class="thumbnail" src="images/mori_rug_small.jpg" onclick="currentSlide(5)" alt="Mori laying on a rug">
+                </div>
+
+                <div class="column">
+                    <img class="thumbnail" src="images/mori_toy_small.jpg" onclick="currentSlide(6)" alt="Morplaying with a toy">
+                </div>
+
+                <div class="column">
+                    <img class="thumbnail" src="images/mori_tv_small.jpg" onclick="currentSlide(7)" alt="Mori watching TV">
+                </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 
+            <div class="gallery">
+                <a href="images/mori_box.jpg"><img src="images/mori_box_small.jpg" alt="Mori in a box"></a>
+                <a href="images/mori_carrier.jpg"><img src="images/mori_carrier_small.jpg" alt="Mori in his carrier"></a>
+                <a href="images/mori_math.jpg"><img src="images/mori_math_small.jpg" alt="Mori studying trigonometry"></a>
+                <a href="images/mori_mat.jpg"><img src="images/mori_mat_small.jpg" alt="Mori on his heating pad"></a>
+                <a href="images/mori_rug.jpg"><img src="images/mori_rug_small.jpg" alt="Mori hangin on a rug"></a>
+                <a href="images/mori_toy.jpg"><img src="images/mori_toy_small.jpg" alt="Mori with his toy"></a>
+                <a href="images/mori_tv.jpg"><img src="images/mori_tv_small.jpg" alt="Mori watching tv"></a>
+            </div>
+        -->
+    </section>
+    <section>
+        <h2 id="video">Mori Video</h2>
+        <iframe src="images/mori_play.mp4" frameborder="0" width="auto" height="400"></iframe>
+        <p>Kitten Mori playing with a new mouse toy!</p>
+    </section>
+    <section>
+        <h2 id="contact">Contact Mori</h2>
+        <form>
+            <input id="fname" type="text" placeholder="First Name" aria-label="Enter first name"><br>
+            <input id="lname" type="text" placeholder="Last Name" aria-label="Enter last name"><br>
+            <input id="email" type="text" placeholder="Email" aria-label="Enter email address"><br>
+            <textarea id="textarea" placeholder="Message here..." aria-label="Enter message"></textarea><br>
+            <input class="button" type="submit" value="Submit" aria-label="Submit button">
+            <input class="button" type="reset" value="Clear Form" aria-label="Clear form button">
+        </form>
+    </section>
+    <footer style="text-align: center;">
+        <p>Copyright &copy; Allie Schultz 2025</p>
+    </footer>
+</body>
+
 </html>
