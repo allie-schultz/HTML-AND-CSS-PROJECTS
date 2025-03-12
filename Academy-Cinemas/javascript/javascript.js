@@ -58,3 +58,28 @@ function alert(message, type) {
     alertPlaceholder.innerHTML = '';
     alertPlaceholder.append(wrapper)
 }
+
+//Shrinks header size when doc is scrolled downb 80px
+$(document).on("scroll", function() {
+    //when webpage is scrolled from top by 50px
+    //this if statement is triggered
+    if ($(document).scrollTop() > 50) {
+        //adds nav-shrink class to same HTML element w/ nav class
+        $("nav").addClass("nav-shrink");
+        //adjusts position of mobile drop menu to accomodte ne hieight decrease
+        $("div.navbar-collapse").css("margin-top", "-6px");
+    } else {
+        //if page hasn't been scrolled, or i back at top
+        //nav-shrink class is removed from html element with nav class
+        $("nav").removeClass("nav-shrink");
+        //margin is returned to original amount
+        $("div.navbar-collapse").css("margin-top", "14px");
+    }
+});
+
+//close mobile menu when nav link is clicked
+$(document).ready(function () {
+    $(".navbar-nav").on('click', '.nav-link:not(".dropdown-toggle"), .dropdown-item', function () {
+        $(".navbar-collapse").collapse('hide');
+    });
+});
